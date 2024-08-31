@@ -1,0 +1,398 @@
+/* Apply the background to the entire page */
+body {
+    background-color: #fffdd000;
+    background-image: url('photo2.avif');
+    background-size: cover; /* This will make the image cover the entire background */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the image fixed in place when scrolling */
+}
+
+/* OR apply the background to a specific section */
+.section-bg {
+    background-image: url('pht.jpg');
+    background-size: cover;
+    background-color: #fffdd000;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+/* Flying effect for images */
+.flying-photo {
+    transition: transform 5s ease;
+    position: relative;
+}
+
+.flying-photo:hover {
+    transform: translateY(-20px) rotate(360deg) scale(1.1);
+}
+
+.flying-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 100px;
+}
+
+.photo-ring .flying-photo:hover {
+    transform: translateY(-20px) rotate(360deg) scale(1.1);
+}
+
+/* Animation for moving images back to place */
+@keyframes flyback {
+    0% {
+        transform: translateY(-50px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+}
+
+.flying-photo.flyback {
+    animation: flyback 5s ease-in-out forwards;
+}
+
+/* Existing styles (partially omitted for brevity) */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f6f624;
+    color: #141414;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "fantasy", "Courier New", "papyrus";
+}
+
+/* More styles... */
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+ } 
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color:#f6f624;
+    color:#141414;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "fantasy", "Courier New", "papyrus";
+}
+.photo-ring {
+    display: inline-block;
+    padding: 5px; /* Space between the image and the rainbow ring */
+    background: conic-gradient(red, orange, yellow, green, blue, indigo, violet, red);
+    border-radius: 50%; /* Makes the outer container circular */
+}
+
+.photo {
+    display: block;
+    width: 150px; /* Adjust the size of the image */
+    height: 150px; /* Adjust the size of the image */
+    border-radius: 50%; /* Makes the image circular */
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #141414
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #fdfdfd00;
+}
+
+.hero .profile-pic {
+    margin-bottom: 20px;
+}
+
+.hero .profile-pic img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    padding: 10px 20px;
+    background-color: #24f65f;
+    color: #141414;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.about, .portfolio, .blog, .contact {
+
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f0f8ff00; /* Light blue background color */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for hover effects */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.portfolio-grid, .blog-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.portfolio-item, .blog-post {
+    width: 45%;
+    margin-bottom: 20px;
+    background-color: #dddddd00;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+.activity {
+    padding: 40px 20px;
+}
+
+.activity-photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.photo-item {
+    background: #ffffff00;
+    border: 1px solid #dddddd00;
+    border-radius: 500px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.998);
+    text-align: center;
+}
+
+.photo-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #dddddd13;
+}
+
+.photo-item p {
+    padding: 10px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact form input, .contact form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact form button {
+    padding: 10px 20px;
+    background-color:#f66324;
+    color:#000000;
+    border: none;
+    border-color: #50f336;
+    border-radius: 500px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f6f624;
+    color: #141414;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .portfolio-grid,
+    .activity-photos {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-item {
+        flex-direction: column;
+    }
+}
+/* Existing styles (partially omitted for brevity) */
+
+/* Flying effect for images */
+.flying-photo {
+    transition: transform 0.5s ease, background-color 0.3s ease; /* Added transition for background color */
+    position: relative;
+    background-color: #fff; /* Initial background color */
+}
+
+.flying-photo:hover {
+    transform: translateY(-20px) rotate(-5deg) scale(1.1);
+    background-color: yellow; /* Background color changes to yellow on hover */
+}
+
+.flying-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.photo-ring .flying-photo:hover {
+    transform: translateY(-20px) rotate(10deg) scale(1.1);
+    background-color: yellow; /* Background color changes to yellow on hover */
+}
+
+/* Animation for moving images back to place */
+@keyframes flyback {
+    0% {
+        transform: translateY(-100px);
+        background-color: yellow;
+    }
+    100% {
+        transform: translateY(0);
+        background-color: #fff; /* Background color returns to white */
+    }
+}
+
+.flying-photo.flyback {
+    animation: flyback 1s ease-in-out forwards;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f6f624;
+    color: #141414;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "fantasy", "Courier New", "papyrus";
+}
+
+/* Portfolio Item */
+.portfolio-item {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-item:hover {
+    background-color: yellow; /* Background color changes to yellow on hover */
+}
+
+/* Other existing styles... */
+/* Skill Section */
+.skills {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f0f8ff; /* Light blue background color */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for hover effects */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+}
+
+.skills:hover {
+    background-color: yellow; /* Changes background color to yellow on hover */
+    transform: scale(1.05); /* Slightly scales up the section on hover */
+}
+
+/* Bio Section */
+.blog {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #e6f7ff47; /* Light cyan background color */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for hover effects */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+}
+
+.blog:hover {
+    background-color: yellow; /* Changes background color to yellow on hover */
+    transform: scale(1.05); /* Slightly scales up the section on hover */
+}
+
+/* Additional cursor effects for links and text in the bio and skill sections */
+.skills a,
+.blog a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.skills a:hover,
+.blog a:hover {
+    color: #007bff; /* Changes text color on hover */
+    text-decoration: underline; /* Underlines text on hover */
+}
+
+.about:hover, .portfolio:hover, .blog:hover, .contact :hover{
+    background-color: yellow; /* Changes background color to yellow on hover */
+    transform: scale(1.05); /* Slightly scales up the section on hover */
+}
+.about a:hover, .portfolio a:hover, .blog a:hover, .contact a:hover{
+      color: #007bff; /* Changes text color on hover */
+   text-decoration: underline; /* Underlines text on hover */
+}
